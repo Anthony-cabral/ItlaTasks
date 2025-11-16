@@ -1,0 +1,7 @@
+C:\Practice\src\Conctactes\Conctactes\bin\Debug\Conctactes.exe.config
+C:\Practice\src\Conctactes\Conctactes\bin\Debug\Conctactes.exe
+C:\Practice\src\Conctactes\Conctactes\bin\Debug\Conctactes.pdb
+C:\Practice\src\Conctactes\Conctactes\obj\Debug\Conctactes.csproj.AssemblyReference.cache
+C:\Practice\src\Conctactes\Conctactes\obj\Debug\Conctactes.csproj.CoreCompileInputs.cache
+C:\Practice\src\Conctactes\Conctactes\obj\Debug\Conctactes.exe
+C:\Practice\src\Conctactes\Conctactes\obj\Debug\Conctactes.pdb

@@ -1,0 +1,23 @@
+@model EduTransportRD.Domain.Entities.Ticket
+
+<link rel="stylesheet" href="~/css/views-details.ccs" />
+
+<h2 class="fw-bold mb-3">Detalle del ticket</h2>
+
+<div class="section-box">
+
+    <p><strong>Estudiante:</strong> @Model.Student.FirstName @Model.Student.LastName</p>
+
+    <p><strong>Ruta:</strong> @Model.Route.RouteName</p>
+
+    <p><strong>Horario:</strong> @DateTime.Today.Add(Model.Schedule.DepartureTime).ToString("hh:mm tt")</p>
+
+    <p><strong>Fecha compra:</strong> @Model.PurchaseDate.ToString("dd/MM/yyyy hh:mm tt")</p>
+
+    <p><strong>Precio:</strong> DOP @Model.PaidPrice</p>
+
+    <p><strong>Estado:</strong> @Model.Status</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>
+

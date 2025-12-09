@@ -1,0 +1,76 @@
+@model EduTransportRD.Domain.Entities.Attendance
+
+<div class="modal fade show" id="editAttendanceModal" tabindex="-1" style="display:block;" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content shadow-lg">
+
+            <div class="modal-form-header">
+                <h4 class="modal-title">Editar Asistencia</h4>
+                <a asp-action="Index" class="modal-close-x">&times;</a>
+            </div>
+
+            <div class="modal-body">
+                <form asp-action="Edit" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" asp-for="Id" />
+
+                    <h5 class="form-section-title">Información de la Asistencia</h5>
+
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label asp-for="StudentId" class="form-label">Estudiante</label>
+                                    <select asp-for="StudentId" class="form-select" asp-items="ViewBag.Students">
+                                        <option value="">Seleccione...</option>
+                                    </select>
+                                    <span asp-validation-for="StudentId" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="RouteId" class="form-label">Ruta</label>
+                                    <select asp-for="RouteId" class="form-select" asp-items="ViewBag.Routes">
+                                        <option value="">Seleccione...</option>
+                                    </select>
+                                    <span asp-validation-for="RouteId" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="Date" class="form-label">Fecha</label>
+                                    <input asp-for="Date" type="date" class="form-control" />
+                                    <span asp-validation-for="Date" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="IsPresent" class="form-label d-block">Estado</label>
+                                    <select asp-for="IsPresent" class="form-select">
+                                        <option value="true">Presente</option>
+                                        <option value="false">Ausente</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

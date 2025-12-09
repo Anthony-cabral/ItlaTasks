@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2 class="mb-4">Dashboard General</h2>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Total Estudiantes</h6>
+                    <h3>@ViewBag.TotalStudents</h3>
+                </div>
+                <i class="bi bi-people-fill" style="font-size:35px;color:#7abaff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Tickets de Hoy</h6>
+                    <h3>@ViewBag.TicketsToday</h3>
+                </div>
+                <i class="bi bi-ticket-detailed-fill" style="font-size:35px;color:#ffa07a;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Total Rutas</h6>
+                    <h3>@ViewBag.TotalRoutes</h3>
+                </div>
+                <i class="bi bi-signpost-split" style="font-size:35px;color:#90ee90;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Horarios</h6>
+                    <h3>@ViewBag.TotalSchedules</h3>
+                </div>
+                <i class="bi bi-clock-fill" style="font-size:35px;color:#ffea7a;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-4">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Choferes</h6>
+                    <h3>@ViewBag.TotalDrivers</h3>
+                </div>
+                <i class="bi bi-person-vcard-fill" style="font-size:35px;color:#cba6f7;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-4">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Vehículos</h6>
+                    <h3>@ViewBag.TotalVehicles</h3>
+                </div>
+                <i class="bi bi-truck-front-fill" style="font-size:35px;color:#ff7acc;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-4">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Pagos del día</h6>
+                    <h3>RD$ @ViewBag.PaymentsToday</h3>
+                </div>
+                <i class="bi bi-cash-stack" style="font-size:35px;color:#7aff93;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-4">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Asistencias Hoy</h6>
+                    <h3>@ViewBag.AttendanceToday</h3>
+                </div>
+                <i class="bi bi-clipboard-check-fill" style="font-size:35px;color:#7ae2ff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-4">
+        <div class="card shadow-sm p-3" style="background:#1f2123;color:white;">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h6>Total Tickets</h6>
+                    <h3>@ViewBag.TotalTickets</h3>
+                </div>
+                <i class="bi bi-receipt-cutoff" style="font-size:35px;color:#ffcf7a;"></i>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr class="mt-5 mb-4" style="border-color:#333;">
+<p style="color:#aaa;"></p>

@@ -1,0 +1,65 @@
+﻿@model EduTransportRD.Domain.Entities.Schedule
+
+<link rel="stylesheet" href="~/css/forms-modal.css" />
+
+<div class="modal fade show modal-form-xl" style="display:block;">
+    <div class="modal-dialog">
+        <div class="modal-content shadow-lg">
+
+            <div class="modal-form-header d-flex justify-content-between align-items-center">
+                <h4 class="modal-title">Editar horario</h4>
+                <a asp-action="Index" class="btn-close btn-close-white"></a>
+            </div>
+
+            <div class="modal-body">
+                <form asp-action="Edit" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="Id" />
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+                    <div class="form-section-card">
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label">Día</label>
+                                <select asp-for="WeekDay" class="form-select"
+                                        asp-items="@(new SelectList(ViewBag.Days))">
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <span asp-validation-for="WeekDay" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Ruta</label>
+                                <select asp-for="RouteId" class="form-select"
+                                        asp-items="ViewBag.Routes">
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <span asp-validation-for="RouteId" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="DepartureTime" class="form-label">Hora salida</label>
+                                <input asp-for="DepartureTime" type="time" class="form-control" />
+                                <span asp-validation-for="DepartureTime" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="ArrivalTime" class="form-label">Hora llegada</label>
+                                <input asp-for="ArrivalTime" type="time" class="form-control" />
+                                <span asp-validation-for="ArrivalTime" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-form-footer">
+                        <a asp-action="Index" class="btn btn-secondary">Cerrar</a>
+                        <button type="submit" class="btn btn-success">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

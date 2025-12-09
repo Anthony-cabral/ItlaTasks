@@ -1,0 +1,48 @@
+﻿@model EduTransportRD.Domain.Entities.Student
+
+@{
+    Layout = "_StudentLayout";
+}
+
+
+<h2>Portal del Estudiante</h2>
+
+<div class="row mt-4">
+
+    <div class="col-md-4 mb-3">
+        <a href="/StudentPortal/Info" class="card p-3">
+            <h5>Mis Informaciones</h5>
+        </a>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <a href="/Tickets/Index" class="card p-3">
+            <h5>Reservas de Tickets</h5>
+        </a>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <a href="/Stops/StudentStops" class="card p-3">
+            <h5>Paradas</h5>
+        </a>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <a href="/Routes/StudentRoutes" class="card p-3">
+            <h5>Rutas</h5>
+        </a>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <a href="/Wallet/Index" class="card p-3">
+            <h5>Cartera</h5>
+        </a>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <a href="/Wallet/AddBalance" class="card p-3">
+            <h5>Agregar Balance</h5>
+        </a>
+    </div>
+
+</div>

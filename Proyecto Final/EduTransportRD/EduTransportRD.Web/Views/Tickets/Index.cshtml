@@ -1,0 +1,48 @@
+@model List<EduTransportRD.Domain.Entities.Ticket>
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Tickets Reservados</h2>
+
+        <a asp-action="Create" class="btn btn-success btn-lg fw-bold">
+            <i class="bi bi-plus-circle"></i> Reservar Ticket
+        </a>
+    </div>
+
+    <div class="table-responsive mt-3">
+        <table class="table table-dark table-hover table-striped align-middle text-center shadow rounded-3">
+
+            <thead class="bg-dark text-light">
+                <tr>
+                    <th>Estudiante</th>
+                    <th>Ruta</th>
+                    <th>Horario</th>
+                    <th>Tipo</th>
+                    <th>Precio</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var t in Model)
+                {
+                    <tr>
+                        <td>@t.Student.FirstName @t.Student.LastName</td>
+                        <td>@t.Route.RouteName</td>
+                        <td>@DateTime.Today.Add(t.Schedule.DepartureTime).ToString("hh:mm tt")</td>
+                        <td>@t.Type</td>
+                        <td>DOP @t.PaidPrice</td>
+                        <td>
+                            <span class="badge bg-success px-3 py-2">
+                                @t.Status
+                            </span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,69 @@
+﻿@model EduTransportRD.Domain.Entities.Driver
+
+@{
+    ViewData["Title"] = "Detalles del conductor";
+    string initials = $"{Model.FirstName?.FirstOrDefault()}{Model.LastName?.FirstOrDefault()}".ToUpper();
+}
+
+<link rel="stylesheet" href="~/css/views-details.css" />
+
+<div class="details-container">
+
+    <!-- HEADER -->
+    <div class="details-header">
+        <div class="profile-circle">
+            @initials
+        </div>
+
+        <div>
+            <h2>@Model.FirstName @Model.LastName</h2>
+            <p class="details-subtitle">Documento: @Model.DocumentId</p>
+        </div>
+
+        <div class="details-buttons">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-action btn-edit">Editar</a>
+            <a asp-action="Index" class="btn-action btn-back">Volver</a>
+            <a href="javascript:void(0);" onclick="confirmDelete(@Model.Id)" class="btn-action btn-delete">Eliminar</a>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="details-body">
+
+        <h3 class="details-section-title">Información general</h3>
+        <div class="section-box">
+            <p><strong>Nombre: </strong>@Model.FirstName @Model.LastName</p>
+            <p><strong>Documento: </strong>@Model.DocumentId</p>
+            <p><strong>Estado: </strong>@Model.Status</p>
+        </div>
+
+        <h3 class="details-section-title">Contacto</h3>
+        <div class="section-box">
+            <p><strong>Teléfono: </strong>@Model.Phone</p>
+            <p><strong>Dirección: </strong>@Model.Address</p>
+        </div>
+
+        <h3 class="details-section-title">Licencia</h3>
+        <div class="section-box">
+            <p><strong>Número de licencia: </strong>@Model.LicenseNumber</p>
+            <p>
+                <strong>Fecha de expiración: </strong>
+                @(Model.LicenseExpiration.HasValue
+                    ? Model.LicenseExpiration.Value.ToString("dd/MM/yyyy")
+                    : "No especificada")
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        function confirmDelete(id) {
+            if (confirm("¿Estás seguro de que deseas eliminar este conductor?")) {
+                window.location = "/Drivers/Delete/" + id;
+            }
+        }
+    </script>
+}

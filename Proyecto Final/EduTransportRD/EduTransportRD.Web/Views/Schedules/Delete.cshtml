@@ -1,0 +1,40 @@
+@model EduTransportRD.Domain.Entities.Schedule
+
+<link rel="stylesheet" href="~/css/forms-modal.css" />
+
+<div class="modal fade show modal-form-sm" style="display:block;">
+    <div class="modal-dialog">
+        <div class="modal-content shadow-lg">
+
+            <div class="modal-form-header d-flex justify-content-between align-items-center">
+                <h4 class="modal-title">Eliminar horario</h4>
+                <a asp-action="Index" class="btn-close btn-close-white"></a>
+            </div>
+
+            <div class="modal-body">
+
+                <p class="mb-3">
+                    ¿Está seguro que desea eliminar el horario de
+                    <strong>@Model.WeekDay</strong>?
+                </p>
+
+                <div class="form-section-card">
+                    <p><strong>Ruta:</strong> @Model.Route?.RouteName</p>
+                    <p><strong>Salida:</strong> @DateTime.Today.Add(Model.DepartureTime).ToString("hh:mm tt")</p>
+                    <p><strong>Llegada:</strong> @DateTime.Today.Add(Model.ArrivalTime).ToString("hh:mm tt")</p>
+                </div>
+
+            </div>
+
+            <div class="modal-form-footer">
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+                <form asp-action="DeleteConfirmed" method="post" class="d-inline">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

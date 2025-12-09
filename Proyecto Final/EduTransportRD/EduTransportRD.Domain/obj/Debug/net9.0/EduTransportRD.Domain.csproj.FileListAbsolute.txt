@@ -1,0 +1,11 @@
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\bin\Debug\net9.0\EduTransportRD.Domain.deps.json
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\bin\Debug\net9.0\EduTransportRD.Domain.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\bin\Debug\net9.0\EduTransportRD.Domain.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\EduTransportRD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\EduTransportRD.Domain.AssemblyInfoInputs.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\EduTransportRD.Domain.AssemblyInfo.cs
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\EduTransportRD.Domain.csproj.CoreCompileInputs.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\EduTransportRD.Domain.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\refint\EduTransportRD.Domain.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\EduTransportRD.Domain.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Domain\obj\Debug\net9.0\ref\EduTransportRD.Domain.dll

@@ -1,0 +1,18 @@
+@model EduTransportRD.Domain.Entities.Stop
+
+<h3>¿Eliminar esta parada?</h3>
+
+<div class="mt-3 p-3 border rounded">
+
+    <p><strong>Nombre:</strong> @Model.StopName</p>
+    <p><strong>Dirección:</strong> @Model.Address</p>
+    <p><strong>Orden:</strong> @Model.StopOrder</p>
+    <p><strong>Ruta:</strong> @Model.RouteId</p>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary ms-2">Volver</a>
+    </form>
+
+</div>

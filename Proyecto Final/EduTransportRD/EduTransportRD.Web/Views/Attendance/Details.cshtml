@@ -1,0 +1,30 @@
+@model EduTransportRD.Domain.Entities.Attendance
+
+<div class="container mt-4">
+
+    <h2 class="fw-bold text-light mb-4">Detalles de Asistencia</h2>
+
+    <div class="card bg-dark text-light shadow-lg border-secondary">
+        <div class="card-body">
+
+            <p><strong>Estudiante:</strong> @Model.Student.FirstName @Model.Student.LastName</p>
+            <p><strong>Ruta:</strong> @Model.Route.RouteName</p>
+            <p><strong>Fecha:</strong> @Model.Date.ToString("dd/MM/yyyy")</p>
+            <p>
+                <strong>Asistencia:</strong>
+                @if (Model.IsPresent)
+                {
+                    <span class="badge bg-success">Presente</span>
+                }
+                else
+                {
+                    <span class="badge bg-danger">Ausente</span>
+                }
+            </p>
+
+            <a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+@model EduTransportRD.Domain.Entities.Attendance
+
+<div class="container mt-4">
+
+    <h2 class="fw-bold text-light">Eliminar Asistencia</h2>
+
+    <div class="alert alert-danger mt-3">
+        ¿Está seguro de que desea eliminar este registro de asistencia?
+    </div>
+
+    <div class="card bg-dark text-light shadow-lg border-secondary">
+        <div class="card-body">
+
+            <p><strong>Estudiante:</strong> @Model.Student.FirstName @Model.Student.LastName</p>
+            <p><strong>Ruta:</strong> @Model.Route.RouteName</p>
+            <p><strong>Fecha:</strong> @Model.Date.ToString("dd/MM/yyyy")</p>
+
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="Id" />
+
+                <button type="submit" class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Eliminar
+                </button>
+
+                <a asp-action="Index" class="btn btn-secondary ms-2">Cancelar</a>
+            </form>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,48 @@
+@model EduTransportRD.Domain.Entities.Route
+
+@{
+    ViewData["Title"] = "Detalles de la ruta";
+    var vehiculo = ViewBag.Vehicle as string ?? "Sin asignar";
+    var inicial = string.IsNullOrEmpty(Model.RouteName) ? "R" : Model.RouteName.Substring(0, 1).ToUpper();
+}
+
+<link rel="stylesheet" href="~/css/views-details.ccs" />
+
+<div class="details-container">
+    <div class="details-header">
+        <div class="profile-circle">
+            @inicial
+        </div>
+
+        <div>
+            <h2>@Model.RouteName</h2>
+            <p class="details-subtitle">Vehículo: @vehiculo</p>
+        </div>
+
+        <div class="details-buttons">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary">Volver</a>
+            <button class="btn btn-danger" onclick="confirmDelete(@Model.Id)">Eliminar</button>
+        </div>
+    </div>
+
+    <div class="details-body">
+        <h4 class="section-title">Información de la ruta</h4>
+        <div class="section-box">
+            <p><strong>Nombre:</strong> @Model.RouteName</p>
+            <p><strong>Vehículo:</strong> @vehiculo</p>
+            <p><strong>Horario:</strong> @Model.StartTime - @Model.EndTime</p>
+            <p><strong>Estado:</strong> @Model.Status</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmDelete(id) {
+            if (confirm("¿Eliminar ruta?")) {
+                window.location = "/Routes/Delete/" + id;
+            }
+        }
+    </script>
+}

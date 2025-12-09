@@ -1,0 +1,61 @@
+@model EduTransportRD.Domain.Entities.Vehicle
+
+@{
+    ViewData["Title"] = "Detalles del vehículo";
+
+    string initials = (Model.Plate ?? "VH").Substring(0, Math.Min(2, (Model.Plate ?? "VH").Length)).ToUpper();
+    var driverName = ViewBag.DriverName as string ?? "Sin asignar";
+}
+
+<link rel="stylesheet" href="~/css/views-details.ccs" />
+
+<div class="details-container">
+
+   
+    <div class="details-header">
+        <div class="profile-circle">
+            @initials
+        </div>
+
+        <div>
+            <h2>@Model.Brand @Model.Model</h2>
+            <p class="details-subtitle">Placa: @Model.Plate</p>
+        </div>
+
+        <div class="details-buttons">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary">Volver</a>
+            <button class="btn btn-danger" onclick="confirmDelete(@Model.Id)">Eliminar</button>
+        </div>
+    </div>
+
+    
+    <div class="details-body">
+
+        <h4 class="section-title">Información del vehículo</h4>
+        <div class="section-box">
+            <p><strong>Placa: </strong>@Model.Plate</p>
+            <p><strong>Marca: </strong>@Model.Brand</p>
+            <p><strong>Modelo: </strong>@Model.Model</p>
+            <p><strong>Año: </strong>@Model.Year</p>
+            <p><strong>Capacidad: </strong>@Model.Capacity</p>
+            <p><strong>Estado: </strong>@Model.Status</p>
+        </div>
+
+        <h4 class="section-title">Conductor</h4>
+        <div class="section-box">
+            <p><strong>Conductor asignado: </strong>@driverName</p>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmDelete(id) {
+            if (confirm("¿Estás seguro de que deseas eliminar este vehículo?")) {
+                window.location = "/Vehicles/Delete/" + id;
+            }
+        }
+    </script>
+}

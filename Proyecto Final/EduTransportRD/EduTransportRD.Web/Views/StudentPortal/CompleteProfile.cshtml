@@ -1,0 +1,56 @@
+@model EduTransportRD.Domain.Entities.Student
+
+<h2>Completar Perfil</h2>
+
+<form method="post">
+
+    <label>Nombre</label>
+    <input class="form-control" asp-for="FirstName" readonly />
+
+    <label>Apellido</label>
+    <input class="form-control" asp-for="LastName" readonly />
+
+    <label>Matrícula</label>
+    <input class="form-control" asp-for="Enrollment" required />
+
+    <label>Documento</label>
+    <input class="form-control" asp-for="DocumentId" required />
+
+    <label>Correo</label>
+    <input class="form-control" asp-for="StudentEmail" required />
+
+    <label>Teléfono</label>
+    <input class="form-control" asp-for="StudentPhone" />
+
+    <label>Dirección</label>
+    <input class="form-control" asp-for="Address" />
+
+    <label>Distrito</label>
+    <input class="form-control" asp-for="District" />
+
+    <label>Ciudad</label>
+    <input class="form-control" asp-for="City" />
+
+    <label>Fecha nacimiento</label>
+    <input type="date" class="form-control" asp-for="BirthDate" />
+
+    <label>Tipo de sangre</label>
+    <input class="form-control" asp-for="BloodType" />
+
+    <label>Condiciones médicas</label>
+    <input class="form-control" asp-for="MedicalConditions" />
+
+    <label>Grado</label>
+    <input class="form-control" asp-for="Grade" />
+
+    <label>Encargado</label>
+    <input class="form-control" asp-for="GuardianName" />
+
+    <label>Teléfono encargado</label>
+    <input class="form-control" asp-for="GuardianPhone" />
+
+    <label>Correo encargado</label>
+    <input class="form-control" asp-for="GuardianEmail" />
+
+    <button class="btn btn-primary mt-3">Guardar</button>
+</form>

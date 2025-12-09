@@ -1,0 +1,43 @@
+@model EduTransportRD.Domain.Entities.Route
+
+@{
+    ViewData["Title"] = "Eliminar ruta";
+}
+
+<div class="container mt-4">
+    <div class="card bg-dark text-light shadow">
+        <div class="card-header">
+            <h4 class="mb-0">Eliminar ruta</h4>
+        </div>
+        <div class="card-body">
+            <p>¿Estás seguro de que deseas eliminar esta ruta?</p>
+
+            <dl class="row">
+                <dt class="col-sm-3">Nombre</dt>
+                <dd class="col-sm-9">@Model.RouteName</dd>
+
+                <dt class="col-sm-3">Hora inicio</dt>
+                <dd class="col-sm-9">@DateTime.Today.Add(Model.StartTime).ToString("hh:mm tt")</dd>
+
+                <dt class="col-sm-3">Hora fin</dt>
+                <dd class="col-sm-9">@DateTime.Today.Add(Model.EndTime).ToString("hh:mm tt")</dd>
+
+                <dt class="col-sm-3">Precio</dt>
+                <dd class="col-sm-9">DOP @Model.TicketPrice</dd>
+
+                <dt class="col-sm-3">Estado</dt>
+                <dd class="col-sm-9">@Model.Status</dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger">
+                    <i class="bi bi-trash-fill"></i> Eliminar
+                </button>
+                <a asp-action="Index" class="btn btn-secondary ms-2">
+                    Cancelar
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

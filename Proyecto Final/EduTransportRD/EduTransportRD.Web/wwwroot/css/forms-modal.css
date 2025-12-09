@@ -1,0 +1,140 @@
+﻿
+
+/* Tamaño */
+.modal-form-xl .modal-dialog {
+    max-width: 1100px;
+}
+
+/* Contenedor */
+.modal-content {
+    background: #1b1f24; /* fondo oscuro */
+    color: #e5e5e5;
+    border-radius: 12px;
+    border: 1px solid #2a2d33;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.45);
+}
+
+/* HEADER DEL MODAL */
+.modal-form-header,
+.modal-header {
+    background: #0d1117; /* oscuro elegante */
+    border-bottom: 1px solid #2d323b;
+    color: #ffffff;
+    padding: 18px 22px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Botón cerrar */
+.btn-close {
+    filter: invert(1); /* icono blanco */
+}
+
+/* CUERPO DEL FORMULARIO */
+.form-section-card {
+    background: #262b31;
+    border: 1px solid #353b45;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+}
+
+    .form-section-card .form-label {
+        color: #c9d1d9;
+        font-weight: 600;
+    }
+
+.form-control,
+.form-select {
+    background: #1f2328;
+    color: #e5e5e5;
+    border: 1px solid #30363d;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #3f8cff;
+        box-shadow: 0 0 0 2px rgba(63,140,255,0.25);
+    }
+
+/* TITULOS DE BLOQUE */
+.form-section-title {
+    color: #9bbcff;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+
+.form-header-info {
+    background: #1f2328 !important; 
+    border-left: 4px solid #3f8cff !important;
+    color: #d0d7de !important;
+    padding: 14px 18px;
+    border-radius: 8px;
+}
+
+
+/* FOOTER DEL MODAL */
+.modal-form-footer,
+.modal-footer {
+    background: #161b22;
+    border-top: 1px solid #2d323b;
+    padding: 14px 18px;
+}
+
+    .modal-form-footer .btn,
+    .modal-footer .btn {
+        min-width: 120px;
+    }
+
+/* Botones */
+.btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+
+.btn-danger {
+    background: #d3455b;
+}
+
+.btn-success {
+    background: #238636;
+}
+
+.modal-content,
+.modal-body,
+.modal-header,
+.modal-footer {
+    background: #1b1f24 !important;
+    color: #e5e5e5 !important;
+}
+
+.form-control,
+.form-select {
+    background: #1f2328 !important;
+    color: #e5e5e5 !important;
+    border: 1px solid #30363d !important;
+}
+
+.modal-close-x {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: 0.2s;
+}
+
+    .modal-close-x:hover {
+        opacity: 1;
+        color: #ff4f4f;
+    }

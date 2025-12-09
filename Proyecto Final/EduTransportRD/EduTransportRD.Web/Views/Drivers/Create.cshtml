@@ -1,0 +1,113 @@
+﻿@model EduTransportRD.Domain.Entities.Driver
+
+<div class="modal fade show" id="createDriverModal" tabindex="-1" style="display:block;" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content shadow-lg">
+
+            <div class="modal-form-header">
+                <h4 class="modal-title">Registrar Conductor</h4>
+                <a asp-action="Index" class="modal-close-x">&times;</a>
+            </div>
+
+            <div class="modal-body">
+                <form asp-action="Create">
+
+                    <h5 class="form-section-title">Datos Generales</h5>
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-md-4">
+                                    <label asp-for="FirstName" class="form-label">Nombre</label>
+                                    <input asp-for="FirstName" class="form-control" />
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label asp-for="LastName" class="form-label">Apellido</label>
+                                    <input asp-for="LastName" class="form-control" />
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label asp-for="DocumentId" class="form-label">Documento de identidad</label>
+                                    <input asp-for="DocumentId" class="form-control" />
+                                    <span asp-validation-for="DocumentId" class="text-danger"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="form-section-title">Medios de Contacto</h5>
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-md-4">
+                                    <label asp-for="Phone" class="form-label">Teléfono</label>
+                                    <input asp-for="Phone" class="form-control" />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <label asp-for="Address" class="form-label">Dirección</label>
+                                    <input asp-for="Address" class="form-control" />
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="form-section-title">Licencia</h5>
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label asp-for="LicenseNumber" class="form-label">Número de licencia</label>
+                                    <input asp-for="LicenseNumber" class="form-control" />
+                                    <span asp-validation-for="LicenseNumber" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="LicenseExpiration" class="form-label">Fecha de expiración</label>
+                                    <input asp-for="LicenseExpiration" type="date" class="form-control" />
+                                    <span asp-validation-for="LicenseExpiration" class="text-danger"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="form-section-title">Estado del Conductor</h5>
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+
+                            <div class="col-md-4">
+                                <label asp-for="Status" class="form-label">Estado</label>
+                                <select asp-for="Status" class="form-select" asp-items="ViewBag.StatusList">
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <span asp-validation-for="Status" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

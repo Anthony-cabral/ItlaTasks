@@ -1,0 +1,173 @@
+﻿@model EduTransportRD.Domain.Entities.Student
+
+<div class="modal fade show" id="editStudentModal" tabindex="-1" style="display:block;" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content shadow-lg">
+
+            <div class="modal-form-header">
+                <h4 class="modal-title">Editar Estudiante</h4>
+                <a asp-action="Index" class="modal-close-x">&times;</a>
+            </div>
+
+            <div class="modal-body">
+                <form asp-action="Edit">
+
+                    <input type="hidden" asp-for="Id" />
+
+                    <!-- Información Personal -->
+                    <h5 class="form-section-title">Información Personal</h5>
+
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label asp-for="FirstName" class="form-label">Nombre</label>
+                                    <input asp-for="FirstName" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="LastName" class="form-label">Apellido</label>
+                                    <input asp-for="LastName" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="DocumentId" class="form-label">ID de Identidad</label>
+                                    <input asp-for="DocumentId" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="BirthDate" class="form-label">Fecha de Nacimiento</label>
+                                    <input asp-for="BirthDate" type="date" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="BloodType" class="form-label">Tipo de Sangre</label>
+                                    <select asp-for="BloodType" class="form-select" asp-items="ViewBag.BloodTypes">
+                                        <option value="">Seleccione...</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label asp-for="MedicalConditions" class="form-label">Condiciones Médicas</label>
+                                    <input asp-for="MedicalConditions" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contacto -->
+                    <h5 class="form-section-title">Contacto del Estudiante</h5>
+
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label asp-for="StudentEmail" class="form-label">Correo</label>
+                                    <input asp-for="StudentEmail" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="StudentPhone" class="form-label">Teléfono</label>
+                                    <input asp-for="StudentPhone" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="Address" class="form-label">Dirección</label>
+                                    <input asp-for="Address" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="District" class="form-label">Distrito</label>
+                                    <input asp-for="District" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="City" class="form-label">Ciudad</label>
+                                    <input asp-for="City" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Área académica -->
+                    <h5 class="form-section-title">Información Académica</h5>
+
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label asp-for="Enrollment" class="form-label">Matrícula</label>
+                                    <input asp-for="Enrollment" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="Grade" class="form-label">Grado</label>
+                                    <input asp-for="Grade" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tutor -->
+                    <h5 class="form-section-title">Información del Tutor</h5>
+
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label asp-for="GuardianName" class="form-label">Nombre del Tutor</label>
+                                    <input asp-for="GuardianName" class="form-control" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="GuardianPhone" class="form-label">Teléfono del Tutor</label>
+                                    <input asp-for="GuardianPhone" class="form-control" />
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label asp-for="GuardianEmail" class="form-label">Correo del Tutor</label>
+                                    <input asp-for="GuardianEmail" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estado -->
+                    <h5 class="form-section-title">Estado del Estudiante</h5>
+
+                    <div class="form-section-card mb-4">
+                        <div class="card-body">
+
+                            <div class="col-md-6">
+                                <label asp-for="Status" class="form-label">Estado</label>
+                                <select asp-for="Status" class="form-select" asp-items="ViewBag.StatusList">
+                                    <option value="">Seleccione...</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

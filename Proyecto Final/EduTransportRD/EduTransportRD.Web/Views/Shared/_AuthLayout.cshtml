@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EduTransportRD - Iniciar sesión</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #131417;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #1f2024;
+            padding: 40px;
+            width: 420px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.45);
+        }
+
+        h2 {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            background-color: #2a2b30;
+            color: white;
+            font-size: 15px;
+        }
+
+            .form-control:focus {
+                outline: 2px solid #4f8cff;
+            }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            margin-top: 18px;
+            background-color: #4f8cff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+            .btn-primary:hover {
+                background-color: #3c6dcc;
+            }
+
+        .create {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .create a {
+                color: #4f8cff;
+                text-decoration: none;
+            }
+
+                .create a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>EduTransportRD</h2>
+
+        @RenderBody()
+
+        <div class="auth-links text-center" style="margin-top: 15px;">
+            @if (Context.Request.Path.Value.Contains("Login"))
+            {
+                <a href="/Auth/Register" style="color:#4f8cff;">Crear cuenta</a>
+            }
+            else
+            {
+                <a href="/Auth/Login" style="color:#4f8cff;">Iniciar sesión</a>
+            }
+        </div>
+
+    </div>
+
+</body>
+</html>

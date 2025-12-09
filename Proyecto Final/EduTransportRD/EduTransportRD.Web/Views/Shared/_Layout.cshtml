@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - EduTransportRD</title>
+
+    <!-- BOOTSTRAP PRIMERO -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="~/icons/bootstrap-icons/bootstrap-icons.css" />
+
+    <!-- CSS PERSONALIZADO (DESPUÉS DE BOOTSTRAP) -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout-dark.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/forms-modal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/views-details.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">EduTransportRD</div>
+
+        <a href="/Home/Index"><i class="bi bi-house-door-fill"></i> Inicio</a>
+        <a href="/Students/Index"><i class="bi bi-people-fill"></i> Estudiantes</a>
+        <a href="/Drivers/Index"><i class="bi bi-person-vcard-fill"></i> Choferes</a>
+        <a href="/Vehicles/Index"><i class="bi bi-truck-front-fill"></i> Vehículos</a>
+        <a href="/Routes/Index"><i class="bi bi-signpost-split"></i> Rutas</a>
+        <a href="/Schedules/Index"><i class="bi bi-clock-fill"></i> Horarios</a>
+        <a href="/Stops/Index"><i class="bi bi-geo-fill"></i> Paradas</a>
+        <a href="/Tickets/Index"><i class="bi bi-ticket-detailed-fill"></i> Tickets</a>
+        <a href="/Payments/Index"><i class="bi bi-wallet2"></i> Pagos</a>
+        <a href="/Wallets/Index"><i class="bi bi-piggy-bank-fill"></i> Carteras</a>
+        <a href="/Attendance/Index"><i class="bi bi-clipboard-check"></i> Asistencias</a>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="content">
+        <div class="topbar">
+            <span><i class="bi bi-person-circle"></i> Administrador</span>
+        </div>
+
+        @RenderBody()
+
+        <footer>
+            © @DateTime.Now.Year - EduTransportRD
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

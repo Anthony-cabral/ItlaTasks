@@ -1,0 +1,91 @@
+@model EduTransportRD.Domain.Entities.Ticket
+
+<div class="modal fade show modal-form-xl" style="display:block;" aria-modal="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content shadow-lg">
+
+            <div class="modal-form-header">
+                <h4 class="modal-title">Reservar Ticket</h4>
+                <a asp-action="Index" class="modal-close-x">&times;</a>
+            </div>
+
+            <div class="modal-body">
+
+                @if (TempData["Debug"] != null)
+                {
+                    <div class="alert alert-warning">@TempData["Debug"]</div>
+                }
+
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger">@TempData["Error"]</div>
+                }
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success">@TempData["Success"]</div>
+                }
+
+                <form asp-action="Create" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <h5 class="form-section-title">Datos del Ticket</h5>
+
+                    <div class="form-section-card mb-4">
+                        <div class="row g-3">
+
+                            <div class="col-md-4">
+                                <label class="form-label">Estudiante</label>
+                                <select asp-for="StudentId" class="form-select" asp-items="ViewBag.Students">
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <span asp-validation-for="StudentId" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Ruta</label>
+                                <select asp-for="RouteId" class="form-select" asp-items="ViewBag.Routes">
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <span asp-validation-for="RouteId" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Horario</label>
+                                <select asp-for="ScheduleId" class="form-select" asp-items="ViewBag.Schedules">
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <span asp-validation-for="ScheduleId" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Tipo de ticket</label>
+                                <select asp-for="Type" class="form-select">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Ida">Ida</option>
+                                    <option value="Vuelta">Vuelta</option>
+                                    <option value="Ida y Vuelta">Ida y Vuelta</option>
+                                </select>
+                                <span asp-validation-for="Type" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-form-footer">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button class="btn btn-success" type="submit">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

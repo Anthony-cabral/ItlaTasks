@@ -1,0 +1,17 @@
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.csproj.AssemblyReference.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.AssemblyInfoInputs.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.AssemblyInfo.cs
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\bin\Debug\net9.0\EduTransportRD.Infrastructure.deps.json
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\bin\Debug\net9.0\EduTransportRD.Infrastructure.runtimeconfig.json
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\bin\Debug\net9.0\EduTransportRD.Infrastructure.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\bin\Debug\net9.0\EduTransportRD.Infrastructure.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\bin\Debug\net9.0\EduTransportRD.Domain.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\bin\Debug\net9.0\EduTransportRD.Domain.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTrans.080209C6.Up2Date
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\refint\EduTransportRD.Infrastructure.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\EduTransportRD.Infrastructure.genruntimeconfig.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Infrastructure\obj\Debug\net9.0\ref\EduTransportRD.Infrastructure.dll

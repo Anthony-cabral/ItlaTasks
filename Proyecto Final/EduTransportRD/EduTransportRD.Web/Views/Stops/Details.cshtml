@@ -1,0 +1,19 @@
+@model EduTransportRD.Domain.Entities.Stop
+
+<link rel="stylesheet" href="~/css/views-details.ccs" />
+
+<h2 class="fw-bold">Detalles de la Parada</h2>
+
+<div class="mt-3 p-3 border rounded">
+
+    <p><strong>Nombre:</strong> @Model.StopName</p>
+    <p><strong>Dirección:</strong> @Model.Address</p>
+    <p><strong>Orden:</strong> @Model.StopOrder</p>
+    <p><strong>Ruta:</strong> @Model.RouteId</p>
+
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning text-white">Editar</a>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+
+</div>

@@ -1,0 +1,68 @@
+@model List<EduTransportRD.Domain.Entities.Schedule>
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Horarios Registrados</h2>
+
+        <a asp-action="Create" class="btn btn-success btn-lg fw-bold">
+            <i class="bi bi-plus-circle"></i> Registrar Horario
+        </a>
+    </div>
+
+    <form method="get" class="d-flex justify-content-end gap-2 mb-3">
+
+        <input type="text"
+               name="search"
+               value="@ViewBag.Search"
+               class="form-control"
+               placeholder="Buscar por día o ruta..."
+               style="max-width:300px;" />
+
+        <button class="btn btn-primary">
+            <i class="bi bi-search"></i> Buscar
+        </button>
+
+    </form>
+
+    <div class="table-responsive mt-3">
+        <table class="table table-dark table-hover table-striped text-center align-middle shadow rounded-3">
+
+            <thead class="bg-dark text-light">
+                <tr>
+                    <th>Día</th>
+                    <th>Ruta</th>
+                    <th>Salida</th>
+                    <th>Llegada</th>
+                    <th style="width:160px;">Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.WeekDay</td>
+                        <td>@item.Route?.RouteName</td>
+                        <td>@DateTime.Today.Add(item.DepartureTime).ToString("hh:mm tt")</td>
+                        <td>@DateTime.Today.Add(item.ArrivalTime).ToString("hh:mm tt")</td>
+
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id"
+                               class="btn btn-warning btn-sm text-white me-1 rounded-circle">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+
+                            <a asp-action="Delete" asp-route-id="@item.Id"
+                               class="btn btn-danger btn-sm rounded-circle">
+                                <i class="bi bi-trash-fill"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

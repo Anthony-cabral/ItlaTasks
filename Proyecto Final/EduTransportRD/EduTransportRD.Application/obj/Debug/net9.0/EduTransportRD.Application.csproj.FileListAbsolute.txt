@@ -1,0 +1,15 @@
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\bin\Debug\net9.0\EduTransportRD.Application.deps.json
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\bin\Debug\net9.0\EduTransportRD.Application.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\bin\Debug\net9.0\EduTransportRD.Application.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\bin\Debug\net9.0\EduTransportRD.Domain.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\bin\Debug\net9.0\EduTransportRD.Domain.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTransportRD.Application.csproj.AssemblyReference.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTransportRD.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTransportRD.Application.AssemblyInfoInputs.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTransportRD.Application.AssemblyInfo.cs
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTransportRD.Application.csproj.CoreCompileInputs.cache
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTrans.E547BEEE.Up2Date
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTransportRD.Application.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\refint\EduTransportRD.Application.dll
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\EduTransportRD.Application.pdb
+C:\Practice\src\EduTransportRD\EduTransportRD.Application\obj\Debug\net9.0\ref\EduTransportRD.Application.dll
